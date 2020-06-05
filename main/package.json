@@ -1,0 +1,18 @@
+{
+  "name": "electron-react-typescript-main",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prestart": "tsc",
+    "start": "tsc -w",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "electron-is-dev": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.1",
+    "electron": "^9.0.2",
+    "typescript": "^3.9.2"
+  }
+}

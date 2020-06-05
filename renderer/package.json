@@ -1,0 +1,74 @@
+{
+  "name": "electron-react-typescript",
+  "description": "A minimum Electron app template with create-react-app and TypeScript.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yan (Peter) Li",
+    "email": "peterleepersonal@gmail.com",
+    "url": "https://github.com/yanli0303/electron-react-typescript"
+  },
+  "private": true,
+  "homepage": "./",
+  "scripts": {
+    "prestart": "electron-builder install-app-deps",
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test --env=jsdom",
+    "build": "node build.js",
+    "nodemon": "nodemon --exec \"wait-on http://localhost:3000 && electron public/electron.js\"",
+    "start": "yarn nodemon & yarn react-start",
+    "start:win": "start yarn nodemon && start yarn react-start"
+  },
+  "dependencies": {
+    "electron-is-dev": "^1.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^14.0.1",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "electron": "^9.0.2",
+    "electron-builder": "^22.6.0",
+    "electron-reload": "^1.5.0",
+    "nodemon": "^2.0.4",
+    "typescript": "^3.9.2",
+    "wait-on": "^5.0.0",
+    "watch": "^1.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "appId": "com.github.electron-react-typescript",
+    "productName": "Electron React TypeScript",
+    "copyright": "Free",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "publish": null,
+    "mac": {
+      "identity": null,
+      "category": "public.app-category.utilities",
+      "target": "dmg"
+    },
+    "win": {
+      "target": "zip"
+    }
+  }
+}

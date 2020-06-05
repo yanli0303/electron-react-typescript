@@ -1,0 +1,10 @@
+*/npm-debug.log*
+*/yarn-debug.log*
+*/yarn-error.log*
+
+*/node_modules/
+*/yarn.lock
+
+renderer/public/electron.js
+renderer/build/
+renderer/dist/
