@@ -23,7 +23,7 @@ yarn build
 open "dist/mac/*.app"
 
 # on Windows
-start "dist/win/*.exe"
+start "" "dist\win-unpacked\Electron React TypeScript.exe"
 ```
 
 ## Development
